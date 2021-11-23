@@ -1,0 +1,17 @@
+{
+  "name": "vacunas-fakeapi",
+  "version": "1.0.0",
+  "description": "Vacunas server with FakeAPI",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "keywords": [
+    "fake-api"
+  ],
+  "author": "MacoChave",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

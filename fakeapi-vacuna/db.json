@@ -1,0 +1,136 @@
+{
+  "user": [
+    {
+      "employeeId": 0,
+      "username": "admin",
+      "password": "admin",
+      "rol": "admin",
+      "id": 1
+    },
+    {
+      "employeeId": 1,
+      "username": "shatje0",
+      "password": "JPsZu6nnna",
+      "id": 2
+    },
+    {
+      "employeeId": 2,
+      "username": "emutton1",
+      "password": "Vtk98LLAT",
+      "id": 3
+    },
+    {
+      "employeeId": 3,
+      "username": "vdavis2",
+      "password": "X8mvQ0",
+      "id": 4
+    },
+    {
+      "employeeId": 4,
+      "username": "cmccardle3",
+      "password": "Ef3H80I6",
+      "id": 5
+    },
+    {
+      "employeeId": 5,
+      "username": "vmcclinton4",
+      "password": "n1pvYWys1AnF",
+      "id": 6
+    },
+    {
+      "employeeId": 6,
+      "username": "eswyndley5",
+      "password": "pQU6xDKK",
+      "id": 7
+    },
+    {
+      "employeeId": 7,
+      "username": "sshilstone6",
+      "password": "vw3h7VOIgr",
+      "id": 8
+    },
+    {
+      "employeeId": 8,
+      "username": "jgreguoli7",
+      "password": "m6UHkx",
+      "id": 9
+    },
+    {
+      "employeeId": 9,
+      "username": "kpurrier8",
+      "password": "IrRTs1e8c",
+      "id": 10
+    },
+    {
+      "employeeId": 10,
+      "username": "tunthank9",
+      "password": "3drKEpA2sS",
+      "id": 11
+    },
+    {
+      "username": "luis",
+      "password": "893v9p3h",
+      "id": 12
+    },
+    {
+      "employeeId": 12,
+      "username": "john",
+      "password": "9s0mjkvj",
+      "id": 13
+    }
+  ],
+  "employee": [
+    {
+      "first_name": "Joyann",
+      "last_name": "Greguoli",
+      "dni": 466789384,
+      "email": "jgreguoli7@hhs.gov",
+      "born_date": "1991-9-19",
+      "address": "7821 Dahle Junction",
+      "phone_number": 5761428872,
+      "estado": "Vacunado",
+      "id": 8
+    },
+    {
+      "first_name": "Krista",
+      "last_name": "Purrier",
+      "dni": 698650660,
+      "email": "kpurrier8@thetimes.co.uk",
+      "born_date": "1997-1-6",
+      "address": "86093 Corscot Street",
+      "phone_number": 1371717967,
+      "estado": "Vacunado",
+      "id": 9
+    },
+    {
+      "first_name": "luis",
+      "last_name": "arcos",
+      "email": "wwef@gmail.com",
+      "dni": 1234567890,
+      "id": 11
+    },
+    {
+      "first_name": "john",
+      "last_name": "doe",
+      "email": "doe@mail.com",
+      "dni": 1234567895,
+      "id": 12
+    }
+  ],
+  "vaccine": [
+    {
+      "employeeId": 8,
+      "type": "Jhonson&Jhonson",
+      "date": "2021-9-25",
+      "dosis": 2,
+      "id": 3
+    },
+    {
+      "employeeId": 9,
+      "type": "Jhonson&Jhonson",
+      "date": "2021-6-15",
+      "dosis": 2,
+      "id": 4
+    }
+  ]
+}

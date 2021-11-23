@@ -1,0 +1,98 @@
+<form [formGroup]="employeeData" (ngSubmit)="updateEmployee()">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control mb-3 mt-3"
+      id="first_name"
+      placeholder="Nombre"
+      formControlName="first_name"
+      [readonly]="!updateMode"
+    />
+    <label for="first_name">Nombre</label>
+  </div>
+  <div class="form-floating">
+    <input
+      type="text"
+      class="form-control mb-3 mt-3"
+      id="last_name"
+      placeholder="Apellido"
+      formControlName="last_name"
+      [readonly]="!updateMode"
+    />
+    <label for="last_name">Apellido</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="number"
+      class="form-control mb-3 mt-3"
+      id="dni"
+      placeholder="DNI"
+      formControlName="dni"
+      [readonly]="!updateMode"
+    />
+    <label for="dni">DNI</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      class="form-control mb-3 mt-3"
+      id="email"
+      placeholder="example@company.com"
+      formControlName="email"
+      [readonly]="!updateMode"
+    />
+    <label for="email">Correo electrónico</label>
+  </div>
+  <div class="form-floating">
+    <input
+      type="date"
+      class="form-control mb-3 mt-3"
+      id="born_date"
+      placeholder="Fecha de nacimiento"
+      formControlName="born_date"
+      [readonly]="!updateMode"
+    />
+    <label for="born_date">Fecha de nacimiento</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control mb-3 mt-3"
+      id="address"
+      placeholder="Dirección"
+      formControlName="address"
+      [readonly]="!updateMode"
+    />
+    <label for="address">Dirección</label>
+  </div>
+  <div class="form-floating">
+    <input
+      type="number"
+      class="form-control mb-3 mt-3"
+      id="phone_number"
+      placeholder="Número telefónico"
+      formControlName="phone_number"
+      [readonly]="!updateMode"
+    />
+    <label for="phone_number">Número telefónico</label>
+  </div>
+  <div class="form-floating d-flex justify-content-center">
+    <span class="badge bg-primary"> {{ employee.estado }} </span>
+  </div>
+  <button
+    type="button"
+    class="btn btn-primary w-100 m-2"
+    [hidden]="updateMode"
+    (click)="updateData()"
+  >
+    Actualizar datos
+  </button>
+  <button
+    type="submit"
+    class="btn btn-warning w-100 m-2"
+    [disabled]="!employeeData.valid"
+    [hidden]="!updateMode"
+  >
+    Guardar cambios
+  </button>
+</form>

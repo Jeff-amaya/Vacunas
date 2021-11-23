@@ -1,0 +1,72 @@
+<div class="d-flex flex-wrap justify-content-around align-items-center">
+  <div class="card p-3 m-3">
+    <select class="form-select" (change)="changeVaccType($event)">
+      <option *ngFor="let vacc of vaccineArray" [ngValue]="vacc">
+        {{ vacc }}
+      </option>
+    </select>
+  </div>
+  <div class="card p-3 m-3">
+    <select class="form-select" (change)="changeVaccDosis($event)">
+      <option *ngFor="let typeVacc of typeVaccineArray" [ngValue]="typeVacc">
+        {{ typeVacc }}
+      </option>
+    </select>
+  </div>
+  <div class="card p-3 m-3">
+    <div class="mb-3">
+      <label for="initDate" class="form-label">Fecha inicial</label>
+      <input
+        type="date"
+        class="form-control"
+        id="initDate"
+        [formControl]="initDate"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="endDate" class="form-label">Fecha final</label>
+      <input
+        type="date"
+        class="form-control"
+        id="endDate"
+        [formControl]="endDate"
+      />
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary" (click)="changeDate()">Filtrar</button>
+    </div>
+  </div>
+  <div class="mb-3">
+    <button class="btn btn-info" (click)="clearFiters()">
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">DNI</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeesFiltering">
+      <td>{{ employee.first_name }}</td>
+      <td>{{ employee.last_name }}</td>
+      <td>{{ employee.dni }}</td>
+      <td>
+        {{ employee.born_date }}
+      </td>
+      <td>{{ employee.estado }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteEmployee(employee)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

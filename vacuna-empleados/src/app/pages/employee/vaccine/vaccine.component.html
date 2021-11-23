@@ -1,0 +1,82 @@
+<div class="d-flex justify-content-around">
+  <div class="card p-3">
+    <div class="card-body">
+      <h5 class="card-title">Mis datos</h5>
+      <p class="card-text">
+        <span class="text-muted">Nombre:</span> {{ employee.first_name }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">Apellido:</span> {{ employee.last_name }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">DNI:</span> {{ employee.dni }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">Correo Electrónico:</span> {{ employee.email }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">Fecha de nacimiento:</span>
+        {{ employee.born_date }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">Residencia:</span> {{ employee.address }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">phone_number:</span>
+        {{ employee.phone_number }}
+      </p>
+      <p class="card-text">
+        <span class="text-muted">estado:</span> {{ employee.estado }}
+      </p>
+    </div>
+  </div>
+  <div class="card p-3">
+    <div class="card-body">
+      <h5 class="card-title">Vacunas</h5>
+      <form [formGroup]="vaccineData" (ngSubmit)="updateVaccine()">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="type">Vacuna</label>
+          <select
+            class="form-select"
+            id="type"
+            (change)="changeVacc($event)"
+            formControlName="type"
+          >
+            <option *ngFor="let vacc of vaccineArray" [ngValue]="vacc">
+              {{ vacc }}
+            </option>
+          </select>
+        </div>
+        <div class="form-floating">
+          <input
+            type="number"
+            class="form-control m-2"
+            id="dosis"
+            placeholder="Dosis"
+            formControlName="dosis"
+            min="1"
+            max="2"
+          />
+          <label for="dosis">Dosis</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="date"
+            class="form-control m-2"
+            id="fecha"
+            placeholder="Fecha de vacunación"
+            formControlName="date"
+          />
+          <label for="date">Fecha de vacunación</label>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-100 m-2"
+          [disabled]="!vaccineData.valid"
+        >
+          Actualizar vacuna
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

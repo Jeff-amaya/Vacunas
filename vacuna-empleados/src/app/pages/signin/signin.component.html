@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center align-items-center w-100 vh-100">
+  <div class="card p-4">
+    <form [formGroup]="userData" (ngSubmit)="login()">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control mb-3"
+          id="username"
+          placeholder="Usuario"
+          formControlName="username"
+        />
+        <label for="username">Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control mb-3"
+          id="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <label for="password">Password</label>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary w-100"
+        [disabled]="!userData.valid"
+      >
+        Iniciar sesión
+      </button>
+    </form>
+  </div>
+</div>
